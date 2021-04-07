@@ -558,7 +558,7 @@ From **app/Http/Controllers/AjaxController.php**, the **/ajax/pc-list-entities**
         return response()->json(['results' => $results]);
     }
 
-In this example, **postPcListEntities** is called via an HTTP POST request to **/ajax/pc-list-entities**.
+In this example, **pcListEntities** is called via an HTTP POST request to **/ajax/pc-list-entities**.
 
 Going through this method, we can see it does the following things.
 

@@ -15,9 +15,9 @@ API parameter model
 
 #. In the application's root directory, run the following command:
 
-   ```
-   php artisan make:model ApiRequestParameters
-   ```
+   .. code-block:: bash
+
+      php artisan make:model ApiRequestParameters
 
    This will create `ApiRequestParameters.php` in the `app/Models` directory.
 
@@ -159,9 +159,9 @@ API request class
 
 #. In the application's root directory, run the following command:
 
-   ```
-   php artisan make:model ApiRequest
-   ```
+   .. code-block:: bash
+
+      php artisan make:model ApiRequest
 
    This will create `ApiRequest.php` in the `app/Models` directory.
 
