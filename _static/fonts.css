@@ -1,0 +1,31 @@
+/* import branding fonts */
+@font-face {
+    font-family: "Gotham Rounded Light";
+    src: url("GothamRnd-Light.woff") format('woff');
+}
+
+@font-face {
+    font-family: "Gotham Rounded Book";
+    src: url("GothamRnd-Book.woff") format('woff');
+}
+
+@font-face {
+    font-family: "Gotham Rounded Book Italic";
+    src: url("GothamRnd-BookIta.woff") format('woff');
+}
+
+@font-face {
+    font-family: "Gotham Rounded Bold";
+    src: url("GothamRnd-Bold.woff") format('woff');
+}
+
+/* fix branding fonts */
+body {
+    font-family: "Gotham Rounded Book";
+    line-height: 1.5;
+}
+
+/* fix alignment of contents container title */
+.caption-text {
+    padding: 0 0 0 20px !important;
+}

@@ -1,3 +1,3 @@
-# Developer Marketing - PHP API Dashboard Lab v3
+# Patch files for Nutanix.dev labs (April 2022)
 
-Supporting files for this lab.  Not intended to be used stand-alone.
+See [accompanying documentation](https://confluence.eng.nutanix.com:8443/x/tjVWCw) for details.

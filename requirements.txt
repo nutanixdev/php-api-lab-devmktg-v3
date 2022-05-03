@@ -1,0 +1,7 @@
+setuptools==57.5.0
+sphinx-autobuild==2021.3.14
+sphinx==4.5.0
+sphinxcontrib-fulltoc==1.2.0
+sphinx-bootstrap-theme==0.8.1
+sphinx_fontawesome==0.0.6
+sphinx-copybutton==0.5.0

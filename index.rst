@@ -2,11 +2,11 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption:     Required Labs
-  :name: _req-labs
+  :caption:     Lab Content
+  :name: _lab-content
   :hidden:
 
-  .. example/index
+
   contents/master_follow
   contents/intro
   contents/setup

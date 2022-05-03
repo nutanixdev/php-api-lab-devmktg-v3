@@ -1,8 +1,23 @@
-{# Import the theme's layout. #}
 {% extends "!layout.html" %}
 
-{# Add Font Awesome stylesheet #}
-{%- block extrahead %}
-{{ super() }}
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{# add to the existing head block without overriding the entire block #}
+{% block extrahead %}
+  <!-- Adobe Analytics Tracking Code --><script src="//assets.adobedtm.com/2cd47122fe1d/d9891d7a991d/launch-15ea444b1708.min.js" async></script><!-- End Adobe Analytics Tracking Code -->
+{% endblock %}
+
+{# don't remove the super() call! #}
+{% block footer %}
+  <div class="page_links">
+    {% if prev %}
+      <span class="prev_page">
+        <a class="btn btn-primary" href="{{ prev.link|e }}"><i class="fa fa-fw fa-chevron-left btn-icon"></i>&nbsp;&nbsp;Previous: {{ prev.title }}</a>
+      </span>
+    {% endif %}
+    {% if next %}
+      <span class="next_page">
+        <a class="btn btn-primary" href="{{ next.link|e }}">Next: {{ next.title }}&nbsp;&nbsp;<i class="fa fa-fw fa-chevron-right btn-icon"></i></a>
+      </span>
+    {% endif %}
+  </div>
+  {{ super() }}
 {% endblock %}

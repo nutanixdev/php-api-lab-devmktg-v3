@@ -35,7 +35,8 @@ import sphinx_fontawesome
 extensions = ['sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinxcontrib.fulltoc',
-    'sphinx_fontawesome']
+    'sphinx_fontawesome',
+    'sphinx_copybutton']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -50,9 +51,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Nutanix Tech Summit 2018'
-copyright = u'2018 Nutanix'
-author = u'Nutanix Global Technical Enablement'
+project = u'Developer Marketing Python API Lab v1.2'
+copyright = u'2021 Nutanix'
+author = u'Chris Rasmussen, Developer Content Architect'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -73,7 +74,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst', 'venv']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -93,7 +94,8 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
 # (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
 # Path should be relative to the ``_static`` files directory.
-html_logo = "NutanixTechSummit.svg"
+
+html_logo = "NutanixWorkshops.svg"
 
 html_favicon = "favicon.ico"
 
@@ -110,9 +112,9 @@ html_show_sphinx = False
 # html_theme_options = {}
 # Theme options are theme-specific and customize the look and feel of a
 # theme further.
-html_theme_options = {
-
-}
+# html_theme_options = {
+# 
+# }
 
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
@@ -165,7 +167,7 @@ html_theme_options = {
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "footer",
+    'source_link_position': "hidden",
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
@@ -184,59 +186,12 @@ html_sidebars = {'**': ['localtoc.html']}
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_css_files = [
+  "fonts.css",
+  "custom.css"
+]
 
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
 #htmlhelp_basename = 'NutanixLabsdoc'
-
-
-# -- Options for LaTeX output ---------------------------------------------
-
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'NutanixLabs.tex', u'Nutanix Labs Documentation',
-     u'Nutanix Global Technical Enablement', 'manual'),
-]
-
-
-# -- Options for manual page output ---------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'nutanixlabs', u'Nutanix Labs Documentation',
-     [author], 1)
-]
-
-
-# -- Options for Texinfo output -------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'NutanixLabs', u'Nutanix Labs Documentation',
-     author, 'NutanixLabs', 'One line description of project.',
-     'Miscellaneous'),
-]
