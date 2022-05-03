@@ -134,14 +134,14 @@ cURL Command Analysis
 
 As an extra step, let's take the v3 API request above and look at what each part of the command is doing.  If you are familiar with using cURL to make API requests, please feel free to skip this section.
 
-- `curl -X POST \` - Run cURL and specify that we will be making an HTTP POST request (as opposed to HTTP GET).
-- `https://<prism_central_virtual_ip>:9440/api/nutanix/v3/vms/list \` - Specify the complete URL to send the request to.
-- `-H 'Accept: application/json' \` - Specify the content types the client is able to understand.
-- `-H 'Content-Type: application/json' \` - Tell the server what type of data is actually sent.
-- `-d '{"kind":"vm"}' \` - For our POST request, specify the request **body** i.e. the parameters to send along with the request.
-- `--insecure \` - Tell the cURL command to ignore SSL certificate verification errors (please see the note above re what this means).
-- `--basic` - Tell the cURL command that we will authenticate using **Basic Authentication**.
-- `--user <cluster_username>:<cluster_password>` - Specify the username and password to use during basic authentication.
+- curl -X POST \ - Run cURL and specify that we will be making an HTTP POST request (as opposed to HTTP GET).
+- https://<prism_central_virtual_ip>:9440/api/nutanix/v3/vms/list \ - Specify the complete URL to send the request to.
+- -H 'Accept: application/json' \ - Specify the content types the client is able to understand.
+- -H 'Content-Type: application/json' \ - Tell the server what type of data is actually sent.
+- -d '{"kind":"vm"}' \ - For our POST request, specify the request **body** i.e. the parameters to send along with the request.
+- --insecure \ - Tell the cURL command to ignore SSL certificate verification errors (please see the note above re what this means).
+- --basic - Tell the cURL command that we will authenticate using **Basic Authentication**.
+- --user <cluster_username>:<cluster_password> - Specify the username and password to use during basic authentication.
 
 Version Use Cases
 .................
