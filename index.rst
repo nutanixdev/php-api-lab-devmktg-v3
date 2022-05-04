@@ -76,7 +76,7 @@ To successfully complete this app lab, you will need an environment that meets t
 
 .. note::
 
-   If your laptop or workstation is not yet setup for development, you may wish to complete the Nutanix Developer Marketing `Dev Environment Setup 1.0 Lab <https://nutanix.handsonworkshops.com/workshops/da53e510-16f4-4fea-9c48-546e70e51a6b/start/>`_, first.
+   If your laptop or workstation is not yet setup for development, you may wish to complete the Nutanix Developer Marketing `Dev Environment Setup 1.0 Lab <https://www.nutanix.dev/labs/dev-environment-setup/>`_, first.
 
 Optional Components
 ###################
@@ -100,4 +100,4 @@ This lab can be run in a couple of different ways.  Primarily:
 Get Started
 ###########
 
-With all that out of the way, let's now start by looking at some of the `conventions that will be used <contents/master_follow/>`_.
+With all that out of the way, let's now start by looking at some of the `conventions that will be used <contents/master_follow.html>`_.

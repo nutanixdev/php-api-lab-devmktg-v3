@@ -70,7 +70,7 @@ Now we can install the base application.  All dependencies are taken care of dur
 
    .. figure:: images/windows_logo_32x32.png
 
-      .. code-block:: bash
+   .. code-block:: bash
 
       cd c:\developer\api-app-lab-v3-<your initials>
 
