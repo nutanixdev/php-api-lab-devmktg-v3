@@ -1,8 +1,10 @@
 #!/bin/zsh
 
-if [ $# -eq 0 ]
+if [ $# -lt 2 ]
     then
-        echo "Please specify the repository name."
+        echo "Please specify the repository name and the new lab directory name."
+        echo "Usage: ./update-lab.sh [repository_name] [lab_directory_name]"
+        echo "Example: ./update-lab.sh python-api-lab-devmktg python-api-lab"
     else
         echo Updating lab "$1" ...
         echo "1. Cloning lab repo"
@@ -27,12 +29,12 @@ if [ $# -eq 0 ]
                 find ./ -type f -exec sed -i -e 's/_lab-content/_lab-content/g' {} \;
                 sed -i -e 's/  .. example\/index//g' index.rst
                 echo "8. Removing old files from main content repo"
-                rm -Rf ../lab-content-2022/$1
-                mkdir -p ../lab-content-2022/$1
+                rm -Rf ../lab-content-2022/$2
+                mkdir -p ../lab-content-2022/$2
                 echo "9. Building lab"
                 sphinx-build . ./_build
                 echo "10. Updating main lab content repo"
-                cp -R ./_build/* ../lab-content-2022/$1
+                cp -R ./_build/* ../lab-content-2022/$2
                 echo "11. Committing changes to lab repo"
                 git add --all .
                 git commit -m "Update lab repo in-line with new lab host outside HoW"
@@ -41,7 +43,7 @@ if [ $# -eq 0 ]
                 sphinx-autobuild --host 0.0.0.0 . ./_build
             else
                 echo ""
-                echo "Repo clone failed.  Are you sure the repository name is valid?"
+                echo "Repo clone failed.  Are you sure the repository name is valid and that the directory doesn't already exist?"
                 echo ""
             fi
 fi
